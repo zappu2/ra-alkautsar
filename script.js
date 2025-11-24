@@ -143,6 +143,143 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Gallery Slider
+let currentSlide = 0;
+const slides = document.querySelectorAll('.gallery-slide');
+const totalSlides = slides.length;
+
+// Create dots
+const dotsContainer = document.getElementById('sliderDots');
+for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('span');
+    dot.className = 'dot';
+    if (i === 0) dot.classList.add('active');
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+}
+
+function moveSlide(direction) {
+    currentSlide += direction;
+    
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    }
+    
+    updateSlider();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+}
+
+function updateSlider() {
+    const track = document.querySelector('.gallery-track');
+    const dots = document.querySelectorAll('#sliderDots .dot');
+    
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+}
+
+// Auto-slide every 5 seconds
+let autoSlide = setInterval(() => {
+    moveSlide(1);
+}, 5000);
+
+// Pause auto-slide on hover
+const slider = document.querySelector('.gallery-slider');
+if (slider) {
+    slider.addEventListener('mouseenter', () => {
+        clearInterval(autoSlide);
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(() => {
+            moveSlide(1);
+        }, 5000);
+    });
+}
+
+// About Section Gallery Slider
+let currentAboutSlide = 0;
+const aboutSlides = document.querySelectorAll('.about-slide');
+const totalAboutSlides = aboutSlides.length;
+
+// Create dots for About gallery
+const aboutDotsContainer = document.getElementById('aboutSliderDots');
+if (aboutDotsContainer) {
+    for (let i = 0; i < totalAboutSlides; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'dot';
+        if (i === 0) dot.classList.add('active');
+        dot.onclick = () => goToAboutSlide(i);
+        aboutDotsContainer.appendChild(dot);
+    }
+}
+
+function moveAboutSlide(direction) {
+    currentAboutSlide += direction;
+    
+    if (currentAboutSlide < 0) {
+        currentAboutSlide = totalAboutSlides - 1;
+    } else if (currentAboutSlide >= totalAboutSlides) {
+        currentAboutSlide = 0;
+    }
+    
+    updateAboutSlider();
+}
+
+function goToAboutSlide(index) {
+    currentAboutSlide = index;
+    updateAboutSlider();
+}
+
+function updateAboutSlider() {
+    const track = document.querySelector('.about-gallery-track');
+    const dots = document.querySelectorAll('#aboutSliderDots .dot');
+    
+    if (track) {
+        track.style.transform = `translateX(-${currentAboutSlide * 100}%)`;
+    }
+    
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentAboutSlide);
+    });
+}
+
+// Auto-slide for About gallery every 4 seconds
+let aboutAutoSlide = setInterval(() => {
+    moveAboutSlide(1);
+}, 4000);
+
+// Pause auto-slide on hover for About gallery
+const aboutSlider = document.querySelector('.about-gallery-slider');
+if (aboutSlider) {
+    aboutSlider.addEventListener('mouseenter', () => {
+        clearInterval(aboutAutoSlide);
+    });
+    
+    aboutSlider.addEventListener('mouseleave', () => {
+        aboutAutoSlide = setInterval(() => {
+            moveAboutSlide(1);
+        }, 4000);
+    });
+}
+
+// Keyboard navigation for slider
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        moveSlide(-1);
+    } else if (e.key === 'ArrowRight') {
+        moveSlide(1);
+    }
+});
+
 // Lazy loading for images (when you add real images)
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
