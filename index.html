@@ -14,8 +14,8 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <i class="fas fa-mosque"></i>
-                    <span>RA AL-KAUTSAR</span>
+                    <img src="images/logo.png" alt="Logo RA AL-KAUTSAR" class="logo-img">
+                    <span class="logo-text">RA AL-KAUTSAR</span>
                 </div>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" class="active">Beranda</a></li>
@@ -24,6 +24,7 @@
                     <li><a href="#programs">Program</a></li>
                     <li><a href="#facilities">Fasilitas</a></li>
                     <li><a href="#achievements">Prestasi</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
                     <li><a href="#registration">Pendaftaran</a></li>
                     <li><a href="#contact">Kontak</a></li>
                 </ul>
@@ -60,9 +61,9 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">Raudhatul Athfal (RA) Al-Kautsar Cisauk merupakan lembaga Pendidikan Anak Usia Dini (PAUD) yang berdiri sejak tahun 2007. Segala upaya selalu dilakukan agar dapat mewujudkan harapan dan amanah orang tua yang melimpahkan putra/putrinya di lembaga Pendidikan Anak Usia Dini RA Al-Kautsar Suradita Cisauk - Tangerang, Provinsi Banten.</p>
+                    <p class="about-intro">Raudhatul Athfal (RA) Al-Kautsar Cisauk merupakan lembaga Pendidikan Anak Usia Dini (PAUD) yang berdiri sejak tahun 2007. Segala upaya selalu dilakukan agar dapat mewujudkan harapan dan tuntutan orang tua yang menitipkan putra/putrinya di lembaga Pendidikan Anak Usia Dini RA Al-Kautsar Suradita Cisauk - Tangerang, Provinsi Banten.</p>
                     
-                    <p class="about-intro">Sambutan masyarakat dari tahun ke tahun terus mengalami peningkatan yang luar biasa, terbukti dengan meningkatnya jumlah peserta didik setiap tahunnya. Hal ini disebabkan oleh prinsip yang dipegang oleh R.A. Al-Kautsar Cisauk bahwa pelayanan pendidikan harus dilakukan dengan maksimal dan mampu melakukan perkembangan zaman tanpa membedakan strata sosial maupun komitmen dan inklusi yang tinggi dalam pengabdian.</p>
+                    <p class="about-intro">Sambutan masyarakat dari tahun ke tahun terus mengalami peningkatan yang luar biasa, terbukti dengan meningkatnya jumlah peserta didik setiap tahunnya. Hal ini disebabkan oleh prinsip yang dipegang oleh R.A. Al-Kautsar Cisauk bahwa pelayanan pendidikan harus dilakukan dengan maksimal dan mampu mengikuti perkembangan zaman tanpa membedakan strata sosial disertai komitmen dan keikhlasan yang tinggal dalam pengabdian.</p>
                     
                     <h3>VISI DAN MISI</h3>
                     
@@ -73,7 +74,7 @@
                     <ul>
                         <li><i class="fas fa-check-circle"></i> Membina keimanan, beribadah dan berakhlak mulia</li>
                         <li><i class="fas fa-check-circle"></i> Menumbuhkembangkan pengetahuan dan kecerdasan</li>
-                        <li><i class="fas fa-check-circle"></i> Melatih keterampilan, kemandirian, jujur, tanggungjawab, dan tegang diri</li>
+                        <li><i class="fas fa-check-circle"></i> Melatih keterampilan, kemandirian, jujur, tanggung jawab, dan tegang diri</li>
                         <li><i class="fas fa-check-circle"></i> Menciptakan lingkungan yang sehat dan bersih</li>
                     </ul>
 
@@ -85,9 +86,30 @@
                     </ul>
                 </div>
                 <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-school"></i>
-                        <p>RA AL-KAUTSAR</p>
+                    <div class="about-gallery-slider">
+                        <div class="about-gallery-container">
+                            <div class="about-gallery-track">
+                                <div class="about-slide">
+                                    <img src="images/gallery/IMG_1369.jpg" alt="Gedung RA AL-KAUTSAR" class="about-slide-image">
+                                </div>
+                                <div class="about-slide">
+                                    <img src="images/gallery/IMG_1370.jpg" alt="Fasilitas RA AL-KAUTSAR" class="about-slide-image">
+                                </div>
+                                <div class="about-slide">
+                                    <img src="images/gallery/IMG_1371.jpg" alt="Area Sekolah RA AL-KAUTSAR" class="about-slide-image">
+                                </div>
+                                <div class="about-slide">
+                                    <img src="images/gallery/IMG_3016.jpg" alt="Lingkungan RA AL-KAUTSAR" class="about-slide-image">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="about-slider-btn about-prev-btn" onclick="moveAboutSlide(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="about-slider-btn about-next-btn" onclick="moveAboutSlide(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="about-slider-dots" id="aboutSliderDots"></div>
                     </div>
                 </div>
             </div>
@@ -103,7 +125,7 @@
             <div class="curriculum-list">
                 <div class="curriculum-item">
                     <span class="number">1.</span>
-                    <p>Kurikulum Merdeka KBTA (Baca Tulis Al-Quran)</p>
+                    <p>Kurikulum Merdeka plus BTA (Baca Tulis Al-Quran)</p>
                 </div>
                 <div class="curriculum-item">
                     <span class="number">2.</span>
@@ -111,7 +133,7 @@
                 </div>
                 <div class="curriculum-item">
                     <span class="number">3.</span>
-                    <p>Pendekatan pembelajaran mendalami dan Kurikulum Berbasis Cinta (KBC)</p>
+                    <p>Pendekatan pembelajaran mendalam dan Kurikulum Berbasis Cinta (KBC)</p>
                 </div>
                 <div class="curriculum-item">
                     <span class="number">4.</span>
@@ -121,9 +143,9 @@
                     <span class="number">5.</span>
                     <p>Waktu belajar dan bermain:</p>
                     <ul>
-                        <li><strong>a. Kelompok Bermain</strong>: Rabu, Rabu dan Jumat<br>
-                        Senin s/d Kamis: Pukul 08.00 - 11.30 WIB</li>
-                        <li><strong>b. Kelompok A</strong>: Sentra s/d Kamis<br>
+                        <li><strong>a. Kelompok Bermain</strong>: Senin, Rabu dan Jumat<br>
+                        Pukul 08.00 - 11.30 WIB</li>
+                        <li><strong>b. Kelompok A</strong>: Senin s/d Kamis<br>
                         Pukul 08.00 - 11.30 WIB</li>
                         <li><strong>c. Kelompok B</strong>: Senin s/d Kamis<br>
                         Pukul 08.00 - 11.30 WIB</li>
@@ -131,8 +153,7 @@
                 </div>
             </div>
             <div class="schedule-note">
-                <p><strong>Hari Jumat semua kelas paling 15 menit lebih awal.</strong></p>
-                <p>Usia dua Kurikuler: Rendengsuan</p>
+                <p><strong>Hari Jumat kelas pulang 15 menit lebih awal.</strong></p>
             </div>
         </div>
     </section>
@@ -156,7 +177,7 @@
                         <i class="fas fa-kaaba"></i>
                     </div>
                     <h3>2. Manasik Haji</h3>
-                    <p>Peringatan Hari Besar Nasional</p>
+                    <p>Belajar Manasik Haji</p>
                 </div>
                 <div class="program-card">
                     <div class="program-icon">
@@ -210,8 +231,8 @@
                     <div class="program-icon">
                         <i class="fas fa-child"></i>
                     </div>
-                    <h3>5. Olahraga Asyik</h3>
-                    <p>Kegiatan olahraga menyenangkan</p>
+                    <h3>5. Calistung Asyik</h3>
+                    <p>Membaca, menulis, menghitung menyenangkan</p>
                 </div>
                 <div class="program-card">
                     <div class="program-icon">
@@ -245,21 +266,21 @@
                         <i class="fas fa-book-open"></i>
                     </div>
                     <h3>3. Tahsinul Quran</h3>
-                    <p>Baca Alquran & Iqro'</p>
+                    <p>Baca Alquran & Iqro' (metode Adjani)</p>
                 </div>
                 <div class="program-card">
                     <div class="program-icon">
                         <i class="fas fa-mosque"></i>
                     </div>
-                    <h3>4. Praktik Keagamaan</h3>
-                    <p>Praktik ibadah sehari-hari</p>
+                    <h3>4. Amaliyah Ramadhan</h3>
+                    <p>Amaliyah Ramadhan</p>
                 </div>
                 <div class="program-card">
                     <div class="program-icon">
                         <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3>5. Germa Jum'at Amal</h3>
-                    <p>Gerakan Jumat Amal</p>
+                    <h3>5. Gema Idul Adha</h3>
+                    <p>Gema Idul Adha</p>
                 </div>
             </div>
 
@@ -323,23 +344,23 @@
                 <ul>
                     <li><i class="fas fa-trophy"></i> Juara 2 lomba hafalan doa harian Open House An-Najah</li>
                     <li><i class="fas fa-trophy"></i> Juara 2 lomba menyanyi Open House An-Najah</li>
-                    <li><i class="fas fa-trophy"></i> Juara 3 lomba mewarnai Open House 2017 Grand</li>
+                    <li><i class="fas fa-trophy"></i> Juara 1 lomba mewarnai Open House SDIT Qonita</li>
                     <li><i class="fas fa-trophy"></i> Juara 2 lomba mewarnai Grand Opening McD Cisauk</li>
                     <li><i class="fas fa-trophy"></i> Juara 1 lomba puzzle Open House An-Najah</li>
-                    <li><i class="fas fa-trophy"></i> Juara 2 lomba menari IGRA Kabupaten Tangerang grup</li>
-                    <li><i class="fas fa-trophy"></i> Juara 2 lomba kalimat thayyibah IGRA Kabupaten Tangerang</li>
+                    <li><i class="fas fa-trophy"></i> Juara 2 lomba menari IGRA Kabupaten Tangerang grup 1&2</li>
+                    <li><i class="fas fa-trophy"></i> Juara 2 lomba kalimat toyyibah IGRA Kabupaten Tangerang</li>
                 </ul>
             </div>
 
             <div class="achievements-year">
                 <h4>Tahun 2023:</h4>
                 <ul>
-                    <li><i class="fas fa-trophy"></i> Juara Best Of The Best lomba Drumband Sanggar Seruni TMI</li>
+                    <li><i class="fas fa-trophy"></i> Juara Best Of The Best lomba Drumband Sanggar Seruni TMII</li>
                     <li><i class="fas fa-trophy"></i> Juara 3 lomba ketangkasan Action Al-Azhar BSD</li>
                     <li><i class="fas fa-trophy"></i> Juara 1 lomba menari PORSENI Ancol</li>
                     <li><i class="fas fa-trophy"></i> Juara 3 hafalan hadits PORSENI Ancol</li>
-                    <li><i class="fas fa-trophy"></i> Juara harapan 1 kretafest PORSENI Ancol</li>
-                    <li><i class="fas fa-trophy"></i> Juara 3 putssel Al-Quran PORSENI Ancol</li>
+                    <li><i class="fas fa-trophy"></i> Juara harapan 1 lari estafet PORSENI Ancol</li>
+                    <li><i class="fas fa-trophy"></i> Juara 3 puitisasi Al-Quran PORSENI Ancol</li>
                     <li><i class="fas fa-trophy"></i> Juara 3 lomba menyanyi tingkat kecamatan Cisauk</li>
                     <li><i class="fas fa-trophy"></i> Juara 1 hafalan surat pendek tingkat kecamatan Cisauk</li>
                 </ul>
@@ -355,7 +376,7 @@
                     <li><i class="fas fa-trophy"></i> Juara 2 Lomba Menari PORSENI Ancol</li>
                     <li><i class="fas fa-trophy"></i> Juara 2 Lomba Gerak Jalan PORSENI Ancol</li>
                     <li><i class="fas fa-trophy"></i> Juara 3 Lomba Hadits PORSENI Ancol</li>
-                    <li><i class="fas fa-trophy"></i> Juara 1 Mewarnai dari Kai</li>
+                    <li><i class="fas fa-trophy"></i> Juara 1 Mewarnai dari KMI</li>
                 </ul>
             </div>
 
@@ -363,7 +384,204 @@
                 <h2>SUPERVISI</h2>
             </div>
             <div class="supervision-text">
-                <p>Akademik dan manajemen R.A. Al-Kautsar disupervisi langsung oleh Dr. Syafril M.Syafril (Kandidat dari Kementerian Agama)</p>
+                <p>Akademik dan manajemen R.A. Al-Kautsar disupervisi langsung oleh Dr. Syafi'i M.Ag (Ahli Pendidikan dari Kementerian Agama)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>GALERI KEGIATAN</h2>
+                <p>Dokumentasi Aktivitas & Fasilitas Sekolah</p>
+            </div>
+            
+            <div class="gallery-wrapper">
+                <div class="gallery-slider">
+                    <button class="slider-btn prev-btn" onclick="moveSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <div class="gallery-container">
+                        <div class="gallery-track">
+                        <!-- Foto Sekolah 1 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_1369.jpg" alt="Gedung RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Gedung Sekolah</h4>
+                                    <p>Fasilitas gedung yang lengkap dan nyaman untuk belajar</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Foto Sekolah 2 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_1370.jpg" alt="Area Bermain RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Lapangan Sekolah</h4>
+                                    <p>Lapangan yang luas dan nyaman untuk berbagai aktivitas</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Foto Sekolah 3 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_1371.jpg" alt="Fasilitas RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Area Bermain</h4>
+                                    <p>Area bermain yang aman dan menyenangkan untuk anak-anak</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Foto Sekolah 4 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_3016.jpg" alt="Kegiatan Siswa RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Tempat Kegiatan Siswa</h4>
+                                    <p>Berbagai aktivitas pembelajaran yang menyenangkan</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Futsal 1 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/097c9391-e189-4f91-a9a1-c2b4b42691f6.jpg" alt="Kegiatan Futsal RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Kegiatan Futsal</h4>
+                                    <p>Olahraga futsal untuk melatih koordinasi dan kerjasama tim</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Futsal 2 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/36562d62-dd05-4076-a2f6-2a9e2f342734.jpg" alt="Tim Futsal RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Tim Futsal</h4>
+                                    <p>Siswa berlatih futsal dengan semangat dan sportivitas</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Futsal 3 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/f9c616c9-b993-4862-8981-e875848b3057.jpg" alt="Lomba Futsal RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Lomba Futsal</h4>
+                                    <p>Prestasi gemilang dalam kompetisi futsal</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mewarnai 1 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_6621.JPG" alt="Kegiatan Mewarnai RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Kegiatan Mewarnai</h4>
+                                    <p>Mengembangkan kreativitas melalui seni mewarnai</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mewarnai 2 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_6667.JPG" alt="Seni Mewarnai RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Seni Mewarnai</h4>
+                                    <p>Siswa berkonsentrasi dalam kegiatan mewarnai</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mewarnai 3 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_6671.JPG" alt="Karya Mewarnai RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Karya Mewarnai</h4>
+                                    <p>Hasil karya mewarnai yang indah dan penuh warna</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mewarnai 4 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_6672.JPG" alt="Workshop Mewarnai RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Workshop Mewarnai</h4>
+                                    <p>Belajar teknik mewarnai dengan gembira</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mewarnai 5 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_6673.JPG" alt="Ekspresi Mewarnai RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Ekspresi Kreativitas</h4>
+                                    <p>Setiap goresan warna adalah ekspresi kreativitas anak</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mewarnai 6 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_6970.JPG" alt="Kelas Mewarnai RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Kelas Mewarnai</h4>
+                                    <p>Suasana kelas yang kondusif untuk berkreasi</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mewarnai 7 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_6971.JPG" alt="Bakat Seni RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Mengasah Bakat Seni</h4>
+                                    <p>Menumbuhkan bakat seni sejak usia dini</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mewarnai 8 -->
+                        <div class="gallery-slide">
+                            <div class="slide-content">
+                                <img src="images/gallery/IMG_6972.JPG" alt="Prestasi Mewarnai RA AL-KAUTSAR" class="slide-image" loading="lazy">
+                                <div class="slide-caption">
+                                    <h4>Prestasi Seni</h4>
+                                    <p>Karya seni yang membanggakan dari siswa kami</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <button class="slider-btn next-btn" onclick="moveSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+            
+            <div class="gallery-note">
+                <p><i class="fas fa-camera"></i> <em>Dokumentasi kegiatan siswa RA AL-KAUTSAR - Geser untuk melihat lebih banyak foto</em></p>
             </div>
         </div>
     </section>
@@ -380,7 +598,7 @@
                     <li><span class="number">2.</span> Kelompok A berusia minimal 4 tahun</li>
                     <li><span class="number">3.</span> Kelompok B berusia minimal 5 tahun</li>
                     <li><span class="number">4.</span> Mengisi formulir pendaftaran</li>
-                    <li><span class="number">5.</span> Photocopy KK 2 lembar</li>
+                    <li><span class="number">5.</span> Photocopy Kartu Keluarga</li>
                     <li><span class="number">6.</span> Photocopy akta kelahiran</li>
                 </ul>
             </div>
@@ -459,7 +677,7 @@
                         <i class="fab fa-instagram"></i>
                         <span>ALKAUTSAR_CISAUK</span>
                     </a>
-                    <a href="https://www.facebook.com/raalkautsar" target="_blank" class="social-link">
+                    <a href="https://web.facebook.com/raalkautsar.kautsar" target="_blank" class="social-link">
                         <i class="fab fa-facebook"></i>
                         <span>RA AL-KAUTSAR</span>
                     </a>
@@ -490,6 +708,7 @@
                         <li><a href="#curriculum">Kurikulum</a></li>
                         <li><a href="#programs">Program</a></li>
                         <li><a href="#achievements">Prestasi</a></li>
+                        <li><a href="#gallery">Galeri</a></li>
                         <li><a href="#contact">Kontak</a></li>
                     </ul>
                 </div>
